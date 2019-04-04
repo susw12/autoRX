@@ -20,6 +20,10 @@
           .ref("User")
           .set({ name: document.getElementById(pillNum).value });
       }
+      function readData() {
+        firebase.databse().ref("User").getElementById(pillNum).value;
+        writeData()
+      }
       firebase.initializeApp(config);
     </script>
 
