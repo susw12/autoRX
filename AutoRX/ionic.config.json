@@ -1,0 +1,7 @@
+{
+  "name": "autoRX",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
