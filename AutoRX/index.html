@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAi6lUEpaRCHqE_n4Ts4eQaKkVkBdc0R_o",
+        authDomain: "test-project-41b40.firebaseapp.com",
+        databaseURL: "https://test-project-41b40.firebaseio.com",
+        projectId: "test-project-41b40",
+        storageBucket: "",
+        messagingSenderId: "728130776521"
+      };
+      firebase.initializeApp(config);
+      function writeData() {
+        firebase
+          .database()
+          .ref("User")
+          .set({ name: document.getElementById(pillNum).value });
+      }
+      function readData() {
+        firebase.databse().ref("User").getElementById(pillNum).value;
+        writeData()
+      }
+      firebase.initializeApp(config);
+    </script>
+
+    <h1>User Information</h1>
+    <input type="number" placeholder="Pill #" id="pillNum" />
+    <button onclick="writeData">Submit</button>
+  </body>
+</html>
